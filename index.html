@@ -1,29 +1,29 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ORBITA 飞碟咖啡滤袋</title>
+    <title>Tonchant Coffee Filters | Biodegradable Single Serve Coffee Filters</title>
     <meta
       name="description"
-      content="ORBITA 飞碟咖啡滤袋，一片展开即可稳定萃取的高级感便携咖啡滤袋。"
+      content="Tonchant Coffee Filters are disc-shaped single serve coffee filters made with eco-friendly biodegradable material options for specialty coffee brands."
     >
-    <link rel="preload" href="assets/orbita-ufo-filter-hero.png" as="image">
+    <link rel="preload" href="assets/tonchant-filters-hero-scene.png" as="image">
     <style>
       :root {
-        --ink: #151413;
-        --soft-ink: #2e2d2a;
-        --paper: #f6f2e9;
-        --porcelain: #fffaf0;
-        --mist: #e2e6dc;
-        --steel: #69706f;
-        --steel-dark: #313636;
-        --burgundy: #7b2034;
-        --burgundy-deep: #45131f;
-        --brass: #b99b5f;
-        --sage: #9cac94;
-        --line: rgba(21, 20, 19, 0.14);
-        --white-line: rgba(255, 250, 240, 0.18);
+        --ink: #13231d;
+        --soft-ink: #41504a;
+        --muted: #6a756f;
+        --paper: #fffaf1;
+        --white: #ffffff;
+        --mint: #d9f6e8;
+        --mint-deep: #42b795;
+        --sky: #dceefb;
+        --sun: #ffd25f;
+        --clay: #b95f38;
+        --leaf: #466f58;
+        --line: rgba(19, 35, 29, 0.14);
+        --shadow: 0 24px 80px rgba(46, 63, 55, 0.15);
         --max: 1180px;
       }
 
@@ -40,8 +40,7 @@
         background: var(--paper);
         color: var(--ink);
         font-family:
-          Inter, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Arial,
-          sans-serif;
+          Inter, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
         letter-spacing: 0;
       }
 
@@ -56,25 +55,25 @@
       }
 
       button,
-      input {
+      input,
+      textarea {
         font: inherit;
       }
 
       .site-header {
         position: fixed;
-        z-index: 20;
+        z-index: 30;
         top: 0;
         left: 0;
         right: 0;
-        border-bottom: 1px solid rgba(255, 250, 240, 0.18);
-        background: rgba(21, 20, 19, 0.64);
-        color: var(--porcelain);
-        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(19, 35, 29, 0.08);
+        background: rgba(255, 250, 241, 0.84);
+        backdrop-filter: blur(18px);
       }
 
       .nav {
         width: min(var(--max), calc(100% - 40px));
-        height: 72px;
+        height: 70px;
         margin: 0 auto;
         display: flex;
         align-items: center;
@@ -86,51 +85,43 @@
         display: inline-flex;
         align-items: center;
         gap: 12px;
-        min-width: 0;
-        font-weight: 760;
+        font-weight: 820;
       }
 
       .brand-mark {
-        width: 34px;
-        height: 34px;
-        border: 1px solid var(--white-line);
+        width: 36px;
+        height: 36px;
+        border: 2px solid var(--ink);
         border-radius: 50%;
         position: relative;
-        flex: 0 0 auto;
+        background: var(--sun);
+        box-shadow: inset 0 0 0 8px var(--paper);
       }
 
-      .brand-mark::before,
       .brand-mark::after {
         content: "";
         position: absolute;
         left: 50%;
         top: 50%;
+        width: 13px;
+        height: 13px;
         transform: translate(-50%, -50%);
         border-radius: 50%;
-      }
-
-      .brand-mark::before {
-        width: 22px;
-        height: 8px;
-        border: 1px solid var(--brass);
-      }
-
-      .brand-mark::after {
-        width: 6px;
-        height: 6px;
-        background: var(--porcelain);
+        background: var(--mint-deep);
       }
 
       .brand-name {
         white-space: nowrap;
+        font-size: 15px;
       }
 
       .nav-links {
         display: flex;
         align-items: center;
         gap: 24px;
-        color: rgba(255, 250, 240, 0.78);
+        color: var(--soft-ink);
         font-size: 14px;
+        font-weight: 680;
       }
 
       .nav-links a {
@@ -138,80 +129,81 @@
       }
 
       .nav-links a:hover {
-        color: var(--porcelain);
+        color: var(--ink);
       }
 
       .nav-cta {
-        border: 1px solid var(--brass);
-        border-radius: 6px;
+        border: 1px solid var(--ink);
+        border-radius: 999px;
         padding: 10px 16px;
-        color: var(--porcelain);
-        background: rgba(185, 155, 95, 0.12);
+        background: var(--ink);
+        color: var(--white);
       }
 
       .hero {
+        min-height: 620px;
+        height: min(820px, 88svh);
         position: relative;
-        height: 86svh;
-        min-height: 520px;
-        max-height: 790px;
-        color: var(--porcelain);
         overflow: hidden;
-        background: var(--ink);
+        background: var(--paper);
       }
 
-      .hero::before {
-        content: "";
+      .hero-photo {
         position: absolute;
         inset: 0;
-        background:
-          linear-gradient(
-            90deg,
-            rgba(12, 12, 11, 0.92) 0%,
-            rgba(12, 12, 11, 0.72) 36%,
-            rgba(12, 12, 11, 0.16) 72%,
-            rgba(12, 12, 11, 0.28) 100%
-          );
-        z-index: 1;
-      }
-
-      .hero-img {
+        z-index: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center center;
       }
 
-      .hero-inner {
+      .hero::before {
+        content: "";
         position: absolute;
-        z-index: 2;
+        z-index: 1;
         inset: 0;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(255, 250, 241, 0.98) 0%,
+            rgba(255, 250, 241, 0.92) 32%,
+            rgba(255, 250, 241, 0.5) 56%,
+            rgba(255, 250, 241, 0.04) 100%
+          );
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        inset: auto 0 0;
+        height: 110px;
+        background: linear-gradient(180deg, transparent, rgba(255, 250, 241, 0.96));
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 2;
         width: min(var(--max), calc(100% - 40px));
+        height: 100%;
         margin: 0 auto;
         display: flex;
         align-items: center;
-        padding-top: 72px;
+        padding-top: 70px;
       }
 
       .hero-copy {
-        width: min(620px, 100%);
+        width: min(680px, 100%);
         min-width: 0;
       }
 
       .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        margin: 0 0 22px;
-        color: rgba(255, 250, 240, 0.76);
+        margin: 0 0 20px;
+        color: var(--leaf);
         font-size: 13px;
+        font-weight: 820;
         text-transform: uppercase;
-      }
-
-      .eyebrow::before {
-        content: "";
-        width: 36px;
-        height: 1px;
-        background: var(--brass);
       }
 
       h1,
@@ -225,7 +217,7 @@
         margin-bottom: 24px;
         font-size: 88px;
         line-height: 0.96;
-        font-weight: 780;
+        font-weight: 860;
         letter-spacing: 0;
       }
 
@@ -234,11 +226,11 @@
       }
 
       .hero-lede {
-        width: min(520px, 100%);
-        margin-bottom: 34px;
-        color: rgba(255, 250, 240, 0.78);
+        width: min(560px, 100%);
+        margin-bottom: 32px;
+        color: var(--soft-ink);
         font-size: 20px;
-        line-height: 1.75;
+        line-height: 1.78;
         overflow-wrap: anywhere;
       }
 
@@ -246,7 +238,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
-        margin-bottom: 34px;
+        margin-bottom: 30px;
       }
 
       .button {
@@ -254,14 +246,15 @@
         align-items: center;
         justify-content: center;
         min-height: 48px;
-        border: 1px solid transparent;
-        border-radius: 6px;
-        padding: 13px 18px;
+        border: 1px solid var(--ink);
+        border-radius: 999px;
+        padding: 13px 19px;
         cursor: pointer;
+        font-weight: 780;
         transition:
           transform 160ms ease,
-          border-color 160ms ease,
-          background 160ms ease;
+          background 160ms ease,
+          color 160ms ease;
       }
 
       .button:hover {
@@ -269,77 +262,73 @@
       }
 
       .button-primary {
-        background: var(--porcelain);
-        color: var(--ink);
+        background: var(--ink);
+        color: var(--white);
       }
 
       .button-secondary {
-        border-color: var(--white-line);
-        color: var(--porcelain);
-        background: rgba(255, 250, 240, 0.08);
+        background: rgba(255, 255, 255, 0.64);
+        color: var(--ink);
       }
 
-      .hero-metrics {
+      .hero-facts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: min(680px, 100%);
+      }
+
+      .hero-facts span {
+        border: 1px solid rgba(19, 35, 29, 0.16);
+        border-radius: 999px;
+        padding: 9px 12px;
+        background: rgba(255, 255, 255, 0.66);
+        color: var(--soft-ink);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .proof-strip {
+        position: relative;
+        z-index: 4;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: var(--white);
+      }
+
+      .proof-inner {
+        width: min(var(--max), calc(100% - 40px));
+        min-height: 104px;
+        margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 18px;
-        width: min(560px, 100%);
+        grid-template-columns: 1.05fr repeat(4, minmax(0, 1fr));
+        align-items: center;
+        gap: 24px;
       }
 
-      .metric {
-        border-top: 1px solid var(--white-line);
-        padding-top: 14px;
+      .proof-title {
+        margin: 0;
+        color: var(--clay);
+        font-size: 14px;
+        font-weight: 840;
+        text-transform: uppercase;
       }
 
-      .metric strong {
-        display: block;
-        margin-bottom: 6px;
-        color: var(--porcelain);
-        font-size: 21px;
-      }
-
-      .metric span {
-        color: rgba(255, 250, 240, 0.64);
+      .proof-item {
+        color: var(--muted);
         font-size: 13px;
         line-height: 1.5;
       }
 
-      .launch-strip {
-        background: var(--porcelain);
-        border-bottom: 1px solid var(--line);
-      }
-
-      .launch-inner {
-        width: min(var(--max), calc(100% - 40px));
-        min-height: 96px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1.1fr repeat(3, minmax(0, 1fr));
-        align-items: center;
-        gap: 22px;
-      }
-
-      .launch-title {
-        margin: 0;
-        color: var(--burgundy);
-        font-size: 15px;
-        font-weight: 760;
-      }
-
-      .launch-item {
-        color: rgba(21, 20, 19, 0.7);
-        font-size: 14px;
-      }
-
-      .launch-item strong {
+      .proof-item strong {
         display: block;
         margin-bottom: 4px;
         color: var(--ink);
-        font-size: 17px;
+        font-size: 22px;
       }
 
       section {
-        padding: 96px 0;
+        padding: 92px 0;
       }
 
       .section-inner {
@@ -348,177 +337,162 @@
       }
 
       .section-kicker {
-        margin-bottom: 16px;
-        color: var(--burgundy);
+        margin-bottom: 14px;
+        color: var(--clay);
         font-size: 13px;
-        font-weight: 760;
+        font-weight: 840;
         text-transform: uppercase;
       }
 
       .section-head {
         display: grid;
-        grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.72fr);
-        gap: 56px;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+        gap: 54px;
         align-items: end;
-        margin-bottom: 48px;
+        margin-bottom: 44px;
       }
 
       h2 {
         margin-bottom: 0;
-        font-size: 48px;
-        line-height: 1.12;
-        font-weight: 760;
+        font-size: 50px;
+        line-height: 1.08;
+        font-weight: 840;
         letter-spacing: 0;
       }
 
       .section-head p {
         margin-bottom: 4px;
-        color: rgba(21, 20, 19, 0.66);
+        color: var(--soft-ink);
         font-size: 17px;
+        line-height: 1.82;
+      }
+
+      .story-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .story-photo {
+        min-height: 520px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        background: var(--mint);
+      }
+
+      .story-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .story-copy {
+        display: grid;
+        gap: 16px;
+      }
+
+      .story-line {
+        border-top: 1px solid var(--line);
+        padding-top: 18px;
+      }
+
+      .story-line h3 {
+        margin-bottom: 8px;
+        font-size: 25px;
+      }
+
+      .story-line p {
+        margin-bottom: 0;
+        color: var(--soft-ink);
+        font-size: 16px;
         line-height: 1.8;
       }
 
-      .features {
+      .structure-band {
+        background:
+          linear-gradient(180deg, rgba(217, 246, 232, 0.9), rgba(255, 250, 241, 0.78)),
+          var(--mint);
+      }
+
+      .structure-grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 14px;
-      }
-
-      .feature-card {
-        min-height: 250px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        padding: 24px;
-        background: rgba(255, 250, 240, 0.64);
-      }
-
-      .feature-number {
-        display: block;
-        margin-bottom: 54px;
-        color: var(--steel);
-        font-size: 13px;
-      }
-
-      .feature-card h3 {
-        margin-bottom: 14px;
-        font-size: 21px;
-      }
-
-      .feature-card p {
-        margin-bottom: 0;
-        color: rgba(21, 20, 19, 0.64);
-        font-size: 15px;
-        line-height: 1.75;
-      }
-
-      .design-band {
-        background: var(--ink);
-        color: var(--porcelain);
-      }
-
-      .design-grid {
-        display: grid;
-        grid-template-columns: 0.95fr 1.05fr;
-        gap: 54px;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 48px;
         align-items: center;
       }
 
-      .device-stage {
-        min-height: 520px;
-        border: 1px solid var(--white-line);
-        border-radius: 8px;
+      .product-stage {
+        min-height: 560px;
         position: relative;
         overflow: hidden;
+        border-radius: 8px;
         background:
-          linear-gradient(135deg, rgba(123, 32, 52, 0.34), transparent 44%),
-          linear-gradient(180deg, #242321 0%, #151413 100%);
+          radial-gradient(circle at 24% 22%, rgba(255, 210, 95, 0.58), transparent 26%),
+          radial-gradient(circle at 84% 80%, rgba(255, 123, 92, 0.22), transparent 28%),
+          var(--white);
+        box-shadow: var(--shadow);
       }
 
-      .device-stage::before {
-        content: "";
+      .product-stage img {
         position: absolute;
         left: 50%;
-        top: 48%;
-        width: 460px;
-        height: 138px;
-        transform: translate(-50%, -50%);
-        border: 1px solid rgba(255, 250, 240, 0.5);
+        top: 50%;
+        width: min(78%, 470px);
+        transform: translate(-50%, -48%);
         border-radius: 50%;
-        background:
-          radial-gradient(
-            circle at 50% 46%,
-            rgba(255, 250, 240, 0.92) 0 16%,
-            rgba(255, 250, 240, 0.36) 17% 30%,
-            rgba(255, 250, 240, 0.08) 31% 100%
-          );
       }
 
-      .device-stage::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: 46%;
-        width: 180px;
-        height: 96px;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        background:
-          radial-gradient(circle at 45% 28%, #5f4738 0 20%, #2b1b18 66%),
-          #2b1b18;
-        box-shadow:
-          0 18px 32px rgba(0, 0, 0, 0.38),
-          inset 0 0 0 1px rgba(255, 250, 240, 0.18);
-      }
-
-      .hotspot {
+      .callout {
         position: absolute;
         z-index: 2;
         display: grid;
-        grid-template-columns: 32px minmax(110px, 170px);
+        grid-template-columns: 28px minmax(118px, 190px);
         align-items: center;
-        gap: 12px;
-        color: rgba(255, 250, 240, 0.78);
+        gap: 10px;
+        color: var(--soft-ink);
         font-size: 13px;
         line-height: 1.45;
       }
 
-      .hotspot i {
-        width: 32px;
-        height: 32px;
-        border: 1px solid var(--brass);
+      .callout i {
+        width: 28px;
+        height: 28px;
+        border: 2px solid var(--ink);
         border-radius: 50%;
-        background: rgba(185, 155, 95, 0.14);
+        background: var(--sun);
       }
 
-      .hotspot strong {
+      .callout strong {
         display: block;
-        color: var(--porcelain);
+        color: var(--ink);
         font-size: 14px;
       }
 
-      .hotspot-1 {
+      .callout-1 {
         left: 8%;
-        top: 20%;
+        top: 16%;
       }
 
-      .hotspot-2 {
-        right: 7%;
-        top: 29%;
+      .callout-2 {
+        right: 6%;
+        top: 42%;
       }
 
-      .hotspot-3 {
-        left: 16%;
-        bottom: 17%;
+      .callout-3 {
+        left: 10%;
+        bottom: 16%;
       }
 
-      .design-copy h2 {
-        margin-bottom: 22px;
+      .spec-panel h2 {
+        margin-bottom: 24px;
       }
 
-      .design-copy p {
-        color: rgba(255, 250, 240, 0.7);
+      .spec-panel p {
+        color: var(--soft-ink);
         font-size: 17px;
-        line-height: 1.85;
+        line-height: 1.82;
       }
 
       .spec-list {
@@ -526,288 +500,296 @@
         padding: 0;
         list-style: none;
         display: grid;
-        gap: 14px;
+        gap: 12px;
       }
 
       .spec-list li {
         display: flex;
         justify-content: space-between;
         gap: 18px;
-        border-top: 1px solid var(--white-line);
+        border-top: 1px solid var(--line);
         padding-top: 14px;
-        color: rgba(255, 250, 240, 0.62);
+        color: var(--muted);
       }
 
       .spec-list strong {
-        color: var(--porcelain);
-        font-weight: 680;
+        color: var(--ink);
+        font-weight: 800;
+        text-align: right;
       }
 
-      .ritual {
-        background: var(--mist);
+      .flow {
+        background: var(--white);
       }
 
-      .steps {
+      .flow-grid,
+      .custom-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 16px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
       }
 
-      .step {
-        min-height: 286px;
-        border: 1px solid rgba(21, 20, 19, 0.12);
+      .flow-card,
+      .custom-card {
+        min-height: 265px;
+        border: 1px solid var(--line);
         border-radius: 8px;
-        padding: 28px;
-        background: rgba(255, 250, 240, 0.58);
+        padding: 24px;
+        background: var(--paper);
       }
 
-      .step-index {
+      .flow-index {
         display: inline-grid;
         place-items: center;
-        width: 44px;
-        height: 44px;
-        margin-bottom: 62px;
-        border: 1px solid var(--burgundy);
+        width: 42px;
+        height: 42px;
+        margin-bottom: 54px;
         border-radius: 50%;
-        color: var(--burgundy);
+        background: var(--ink);
+        color: var(--white);
         font-size: 14px;
-        font-weight: 760;
+        font-weight: 840;
       }
 
-      .step h3 {
+      .flow-card h3,
+      .custom-card h3 {
         margin-bottom: 12px;
-        font-size: 23px;
+        font-size: 22px;
       }
 
-      .step p {
+      .flow-card p,
+      .custom-card p {
         margin-bottom: 0;
-        color: rgba(21, 20, 19, 0.64);
+        color: var(--soft-ink);
         font-size: 15px;
         line-height: 1.76;
       }
 
-      .collection-grid {
+      .custom-band {
+        background:
+          linear-gradient(135deg, rgba(220, 238, 251, 0.9), rgba(255, 250, 241, 0.82)),
+          var(--sky);
+      }
+
+      .custom-card:nth-child(2) {
+        background: #fff4d1;
+      }
+
+      .custom-card:nth-child(3) {
+        background: #ecfff5;
+      }
+
+      .custom-card:nth-child(4) {
+        background: #fff0eb;
+      }
+
+      .custom-label {
+        display: block;
+        margin-bottom: 58px;
+        color: var(--clay);
+        font-size: 13px;
+        font-weight: 840;
+        text-transform: uppercase;
+      }
+
+      .scene-band {
+        background: var(--white);
+      }
+
+      .scene-grid {
         display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
+        grid-template-columns: 1fr 1fr;
         gap: 18px;
       }
 
-      .blend-card {
-        min-height: 420px;
-        border-radius: 8px;
-        padding: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        overflow: hidden;
-        border: 1px solid var(--line);
-      }
-
-      .blend-card.primary {
-        background:
-          linear-gradient(135deg, rgba(69, 19, 31, 0.88), rgba(49, 54, 54, 0.96)),
-          var(--burgundy-deep);
-        color: var(--porcelain);
-      }
-
-      .blend-card.secondary {
-        background: var(--porcelain);
-      }
-
-      .blend-top {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        color: currentColor;
-      }
-
-      .blend-label {
-        color: rgba(255, 250, 240, 0.68);
-        font-size: 13px;
-      }
-
-      .secondary .blend-label {
-        color: rgba(21, 20, 19, 0.54);
-      }
-
-      .blend-name {
-        width: min(460px, 100%);
-      }
-
-      .blend-name h3 {
-        margin-bottom: 16px;
-        font-size: 36px;
-        line-height: 1.18;
-      }
-
-      .blend-name p {
-        margin-bottom: 0;
-        color: rgba(255, 250, 240, 0.72);
-        line-height: 1.76;
-      }
-
-      .secondary .blend-name p {
-        color: rgba(21, 20, 19, 0.64);
-      }
-
-      .taste-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .taste {
-        border: 1px solid currentColor;
-        border-radius: 6px;
-        padding: 8px 10px;
-        color: inherit;
-        font-size: 13px;
-        opacity: 0.78;
-      }
-
-      .shop-band {
-        background: var(--ink);
-        color: var(--porcelain);
-      }
-
-      .shop-panel {
-        display: grid;
-        grid-template-columns: 0.9fr 1.1fr;
-        gap: 48px;
-        align-items: center;
-      }
-
-      .pack-shot {
-        min-height: 440px;
+      .scene-card {
+        margin: 0;
+        min-height: 460px;
         position: relative;
-        border: 1px solid var(--white-line);
-        border-radius: 8px;
         overflow: hidden;
-        background:
-          linear-gradient(145deg, rgba(105, 112, 111, 0.24), transparent 48%),
-          #201f1d;
+        border-radius: 8px;
+        background: var(--paper);
       }
 
-      .pack {
+      .scene-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .scene-card figcaption {
         position: absolute;
-        bottom: 60px;
-        left: 50%;
-        width: 250px;
-        height: 330px;
-        transform: translateX(-50%) rotate(-2deg);
-        border-radius: 8px 8px 4px 4px;
-        border: 1px solid rgba(255, 250, 240, 0.2);
-        background:
-          linear-gradient(180deg, #3a3a36 0%, #151413 100%),
-          #151413;
-        box-shadow: 0 36px 80px rgba(0, 0, 0, 0.38);
+        left: 18px;
+        bottom: 18px;
+        border-radius: 999px;
+        padding: 8px 11px;
+        background: rgba(255, 255, 255, 0.8);
+        color: var(--ink);
+        font-size: 12px;
+        font-weight: 780;
+        backdrop-filter: blur(10px);
       }
 
-      .pack::before {
-        content: "";
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 16px;
+      }
+
+      .gallery-main,
+      .gallery-stack figure {
+        margin: 0;
+        overflow: hidden;
+        border-radius: 8px;
+        background: var(--white);
+      }
+
+      .gallery-main {
+        min-height: 590px;
+        position: relative;
+      }
+
+      .gallery-main img,
+      .gallery-stack img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .gallery-main figcaption,
+      .gallery-stack figcaption {
         position: absolute;
-        inset: 28px 28px auto;
-        height: 128px;
-        border: 1px solid rgba(185, 155, 95, 0.7);
-        border-radius: 50%;
+        left: 18px;
+        bottom: 18px;
+        border-radius: 999px;
+        padding: 8px 11px;
+        background: rgba(255, 255, 255, 0.78);
+        color: var(--ink);
+        font-size: 12px;
+        font-weight: 780;
+        backdrop-filter: blur(10px);
       }
 
-      .pack::after {
-        content: "ORBITA";
-        position: absolute;
-        left: 28px;
-        right: 28px;
-        bottom: 34px;
-        color: var(--porcelain);
-        font-size: 28px;
-        font-weight: 760;
-        text-align: center;
+      .gallery-stack {
+        display: grid;
+        gap: 16px;
       }
 
-      .pack-shadow {
-        position: absolute;
-        left: 50%;
-        bottom: 42px;
-        width: 360px;
-        height: 46px;
-        transform: translateX(-50%);
-        border-radius: 50%;
-        background: rgba(0, 0, 0, 0.36);
-        filter: blur(10px);
+      .gallery-stack figure {
+        min-height: 287px;
+        position: relative;
       }
 
-      .shop-copy h2 {
+      .detail-band {
+        padding-top: 0;
+      }
+
+      .detail-panel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: center;
+        border-top: 1px solid var(--line);
+        padding-top: 72px;
+      }
+
+      .detail-panel img {
+        border-radius: 8px;
+        background: var(--white);
+      }
+
+      .detail-copy h2 {
         margin-bottom: 20px;
       }
 
-      .shop-copy p {
-        color: rgba(255, 250, 240, 0.68);
+      .detail-copy p {
+        color: var(--soft-ink);
         font-size: 17px;
-        line-height: 1.8;
+        line-height: 1.85;
       }
 
-      .option-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 28px 0;
+      .cta-band {
+        background: var(--ink);
+        color: var(--white);
       }
 
-      .option {
-        border: 1px solid var(--white-line);
-        border-radius: 6px;
-        padding: 12px 14px;
-        background: rgba(255, 250, 240, 0.06);
-        color: var(--porcelain);
-        cursor: pointer;
+      .cta-band .section-kicker {
+        color: var(--sun);
       }
 
-      .option.is-active {
-        border-color: var(--brass);
-        background: rgba(185, 155, 95, 0.15);
+      .cta-band .button-primary {
+        border-color: var(--sun);
+        background: var(--sun);
+        color: var(--ink);
       }
 
-      .price-row {
-        display: flex;
-        align-items: end;
-        gap: 14px;
-        margin-bottom: 26px;
-      }
-
-      .price {
-        font-size: 42px;
-        font-weight: 780;
-      }
-
-      .price-note {
-        margin-bottom: 8px;
-        color: rgba(255, 250, 240, 0.58);
-      }
-
-      .signup-form {
+      .cta-grid {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 10px;
-        width: min(560px, 100%);
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 48px;
+        align-items: start;
       }
 
-      .signup-form input {
+      .cta-copy h2 {
+        margin-bottom: 20px;
+      }
+
+      .cta-copy p {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 17px;
+        line-height: 1.85;
+      }
+
+      .inquiry-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .inquiry-form label {
+        display: grid;
+        gap: 7px;
+        color: rgba(255, 255, 255, 0.68);
+        font-size: 13px;
+        font-weight: 720;
+      }
+
+      .inquiry-form input,
+      .inquiry-form textarea {
+        width: 100%;
         min-height: 50px;
-        border: 1px solid var(--white-line);
-        border-radius: 6px;
-        padding: 0 16px;
-        background: rgba(255, 250, 240, 0.08);
-        color: var(--porcelain);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        padding: 12px 14px;
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--white);
         outline: none;
       }
 
-      .signup-form input::placeholder {
-        color: rgba(255, 250, 240, 0.5);
+      .inquiry-form textarea,
+      .form-wide {
+        grid-column: 1 / -1;
+      }
+
+      .inquiry-form textarea {
+        min-height: 108px;
+        resize: vertical;
+      }
+
+      .inquiry-form input::placeholder,
+      .inquiry-form textarea::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      .form-note {
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.54);
+        font-size: 13px;
       }
 
       .site-footer {
-        background: #100f0e;
-        color: rgba(255, 250, 240, 0.62);
+        background: #0c1713;
+        color: rgba(255, 255, 255, 0.62);
         padding: 34px 0;
       }
 
@@ -820,71 +802,78 @@
         font-size: 13px;
       }
 
-      @media (max-width: 920px) {
+      @media (max-width: 980px) {
         .nav-links {
           display: none;
         }
 
         h1 {
-          font-size: 62px;
+          font-size: 64px;
         }
 
-        .hero-lede {
-          font-size: 18px;
+        .hero-photo {
+          object-position: 58% center;
         }
 
-        .launch-inner,
+        .hero::before {
+          background: linear-gradient(90deg, rgba(255, 250, 241, 0.98) 0%, rgba(255, 250, 241, 0.88) 48%, rgba(255, 250, 241, 0.18) 100%);
+        }
+
+        .proof-inner,
         .section-head,
-        .design-grid,
-        .collection-grid,
-        .shop-panel {
+        .story-grid,
+        .structure-grid,
+        .scene-grid,
+        .gallery-grid,
+        .detail-panel,
+        .cta-grid {
           grid-template-columns: 1fr;
         }
 
-        .features,
-        .steps {
+        .flow-grid,
+        .custom-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .proof-inner {
+          padding: 24px 0;
         }
       }
 
-      @media (max-width: 640px) {
+      @media (max-width: 680px) {
         .nav {
           width: min(100% - 28px, var(--max));
           height: 64px;
         }
 
-        .brand-name {
-          font-size: 14px;
+        .hero {
+          min-height: 640px;
+          height: 84svh;
         }
 
-        .hero {
-          height: 84svh;
-          min-height: 520px;
+        .hero-photo {
+          object-position: 64% center;
         }
 
         .hero::before {
-          background: rgba(12, 12, 11, 0.72);
-        }
-
-        .hero-img {
-          object-position: 64% center;
+          background: linear-gradient(180deg, rgba(255, 250, 241, 0.94) 0%, rgba(255, 250, 241, 0.76) 58%, rgba(255, 250, 241, 0.22) 100%);
         }
 
         .hero-inner,
         .section-inner,
-        .launch-inner,
+        .proof-inner,
         .footer-inner {
           width: min(100% - 28px, var(--max));
         }
 
         .hero-inner {
-          align-items: flex-end;
-          padding: 104px 0 34px;
+          align-items: flex-start;
+          padding: 104px 0 40px;
         }
 
         h1 {
           font-size: 46px;
-          line-height: 1.03;
+          line-height: 1;
         }
 
         h2 {
@@ -892,85 +881,72 @@
         }
 
         section {
-          padding: 68px 0;
+          padding: 66px 0;
         }
 
         .hero-lede {
-          width: min(340px, 100%);
           font-size: 16px;
-          line-height: 1.65;
+          line-height: 1.7;
         }
 
-        .hero-metrics,
-        .features,
-        .steps {
+        .proof-inner,
+        .flow-grid,
+        .custom-grid,
+        .inquiry-form {
           grid-template-columns: 1fr;
         }
 
-        .metric {
+        .proof-item {
           display: grid;
-          grid-template-columns: 90px 1fr;
+          grid-template-columns: 96px 1fr;
           gap: 12px;
           align-items: baseline;
         }
 
-        .feature-card,
-        .step {
-          min-height: auto;
-        }
-
-        .feature-number,
-        .step-index {
-          margin-bottom: 34px;
-        }
-
-        .device-stage,
-        .pack-shot {
+        .story-photo,
+        .product-stage,
+        .gallery-main,
+        .scene-card {
           min-height: 380px;
         }
 
-        .device-stage::before {
-          width: 310px;
-          height: 98px;
+        .product-stage img {
+          width: 86%;
         }
 
-        .device-stage::after {
-          width: 124px;
-          height: 72px;
-        }
-
-        .hotspot {
-          grid-template-columns: 26px minmax(96px, 136px);
-          gap: 8px;
+        .callout {
+          grid-template-columns: 24px minmax(92px, 132px);
           font-size: 12px;
         }
 
-        .hotspot i {
-          width: 26px;
-          height: 26px;
+        .callout i {
+          width: 24px;
+          height: 24px;
         }
 
-        .hotspot-1 {
-          left: 6%;
-          top: 14%;
+        .callout-1 {
+          left: 5%;
+          top: 8%;
         }
 
-        .hotspot-2 {
-          right: 4%;
-          top: 26%;
+        .callout-2 {
+          right: 3%;
+          top: 38%;
         }
 
-        .hotspot-3 {
-          left: 10%;
-          bottom: 12%;
+        .callout-3 {
+          left: 7%;
+          bottom: 9%;
         }
 
-        .blend-card {
-          min-height: 330px;
+        .flow-card,
+        .custom-card {
+          min-height: auto;
         }
 
-        .signup-form {
-          grid-template-columns: 1fr;
+        .flow-index,
+        .custom-label {
+          margin-bottom: 34px;
         }
 
         .footer-inner {
@@ -987,296 +963,394 @@
           width: 100%;
         }
 
-        .blend-name h3 {
-          font-size: 30px;
-        }
-
-        .price {
-          font-size: 34px;
+        .proof-item {
+          grid-template-columns: 86px 1fr;
         }
       }
     </style>
   </head>
   <body>
     <header class="site-header">
-      <nav class="nav" aria-label="主导航">
-        <a class="brand" href="#top" aria-label="ORBITA 首页">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Tonchant Coffee Filters home">
           <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-name">ORBITA</span>
+          <span class="brand-name">Tonchant Coffee Filters</span>
         </a>
         <div class="nav-links">
-          <a href="#design">结构</a>
-          <a href="#ritual">冲煮</a>
-          <a href="#collection">风味</a>
-          <a class="nav-cta" href="#shop">订阅首发</a>
+          <a href="#materials">Materials</a>
+          <a href="#structure">Structure</a>
+          <a href="#workflow">Brewing</a>
+          <a href="#custom">Private Label</a>
+          <a class="nav-cta" href="#inquiry">Request Samples</a>
         </div>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero" aria-label="ORBITA 飞碟咖啡滤袋首屏">
+      <section class="hero" aria-label="Tonchant Coffee Filters hero">
         <img
-          class="hero-img"
-          src="assets/orbita-ufo-filter-hero.png"
-          alt="飞碟造型咖啡滤袋悬停在陶瓷杯上方的高级产品摄影"
+          class="hero-photo"
+          src="assets/tonchant-filters-hero-scene.png"
+          alt="Tonchant Coffee Filters on a glass coffee server in a bright cafe scene"
         >
         <div class="hero-inner">
           <div class="hero-copy">
-            <p class="eyebrow">single serve pour-over filter</p>
-            <h1><span>ORBITA</span><span>飞碟咖啡滤袋</span></h1>
+            <p class="eyebrow">biodegradable single serve coffee filters</p>
+            <h1><span>Tonchant</span><span>Coffee Filters</span></h1>
             <p class="hero-lede">
-              一片展开，自动架在杯口。圆盘滤翼稳定水流，中心粉仓释放层次，
-              把手冲的秩序感收进便携滤袋。
+              A disc-shaped drip filter system for specialty coffee brands. Made with
+              eco-friendly biodegradable material options, designed for clean brewing,
+              easy packaging, and memorable private-label presentation.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#shop">加入试饮清单</a>
-              <a class="button button-secondary" href="#design">查看结构</a>
+              <a class="button button-primary" href="#inquiry">Request Samples</a>
+              <a class="button button-secondary" href="#structure">View Product Details</a>
             </div>
-            <div class="hero-metrics" aria-label="产品卖点">
-              <div class="metric">
-                <strong>12g</strong>
-                <span>单杯黄金粉量</span>
-              </div>
-              <div class="metric">
-                <strong>92°C</strong>
-                <span>推荐萃取水温</span>
-              </div>
-              <div class="metric">
-                <strong>180ml</strong>
-                <span>清晰甜感杯量</span>
-              </div>
+            <div class="hero-facts" aria-label="Product highlights">
+              <span>10-16 g single serve capacity</span>
+              <span>9.5 cm standard size</span>
+              <span>Biodegradable material options</span>
+              <span>Custom print and pouch service</span>
             </div>
           </div>
         </div>
       </section>
 
-      <aside class="launch-strip" aria-label="首发信息">
-        <div class="launch-inner">
-          <p class="launch-title">ORBITA Reserve 首发批次</p>
-          <div class="launch-item">
-            <strong>20 枚装</strong>
-            独立氮封滤袋
+      <aside class="proof-strip" aria-label="Product summary">
+        <div class="proof-inner">
+          <p class="proof-title">Built for coffee brands</p>
+          <div class="proof-item">
+            <strong>10-16 g</strong>
+            Ideal single cup dose
           </div>
-          <div class="launch-item">
-            <strong>0 器具门槛</strong>
-            杯口展开即冲
+          <div class="proof-item">
+            <strong>9.5 cm</strong>
+            Standard filter format
           </div>
-          <div class="launch-item">
-            <strong>3 种风味</strong>
-            从明亮到深邃
+          <div class="proof-item">
+            <strong>Eco</strong>
+            Biodegradable options
+          </div>
+          <div class="proof-item">
+            <strong>Custom</strong>
+            Filter, print, pouch
           </div>
         </div>
       </aside>
 
-      <section aria-labelledby="feature-title">
+      <section class="scene-band" id="materials" aria-labelledby="materials-title">
         <div class="section-inner">
           <div class="section-head">
             <div>
-              <p class="section-kicker">why orbit form</p>
-              <h2 id="feature-title">飞碟不是造型噱头，是为了让每杯更稳定。</h2>
+              <p class="section-kicker">material story</p>
+              <h2 id="materials-title">A brighter single serve experience with a lower impact story.</h2>
             </div>
             <p>
-              平衡支撑、注水面积和粉床厚度，减少便携滤袋常见的倾斜、塌陷和
-              过快流速。办公室、酒店、露营，都能保持同一套冲煮节奏。
+              Tonchant Coffee Filters can be specified with biodegradable paper or non-woven
+              filter material options, helping coffee brands build convenient products without
+              giving up their sustainability message.
             </p>
           </div>
 
-          <div class="features">
-            <article class="feature-card">
-              <span class="feature-number">01</span>
-              <h3>环形滤翼</h3>
-              <p>宽幅支点贴合多数杯口，让滤袋在注水时保持水平，粉床不偏斜。</p>
-            </article>
-            <article class="feature-card">
-              <span class="feature-number">02</span>
-              <h3>穹顶粉仓</h3>
-              <p>中心微拱形腔体为咖啡粉留出膨胀空间，闷蒸更完整。</p>
-            </article>
-            <article class="feature-card">
-              <span class="feature-number">03</span>
-              <h3>渐进流速</h3>
-              <p>双密度滤纸控制前段浸润与后段流速，甜感更集中。</p>
-            </article>
-            <article class="feature-card">
-              <span class="feature-number">04</span>
-              <h3>即取即弃</h3>
-              <p>冲煮完成后整片提起，不需要滤杯、滤纸和额外清洁。</p>
-            </article>
+          <div class="scene-grid">
+            <figure class="scene-card">
+              <img
+                src="assets/tonchant-filters-eco-scene.png"
+                alt="Tonchant Coffee Filters with leaves, coffee beans, and recyclable pouch cues"
+              >
+              <figcaption>biodegradable material options</figcaption>
+            </figure>
+            <figure class="scene-card">
+              <img
+                src="assets/tonchant-filters-custom-scene.png"
+                alt="Tonchant Coffee Filters with blank packaging and retail display box"
+              >
+              <figcaption>private-label packaging ready</figcaption>
+            </figure>
           </div>
         </div>
       </section>
 
-      <section class="design-band" id="design" aria-labelledby="design-title">
-        <div class="section-inner design-grid">
-          <div class="device-stage" aria-label="飞碟咖啡滤袋结构示意">
-            <div class="hotspot hotspot-1">
-              <i aria-hidden="true"></i>
-              <span><strong>杯口支撑</strong>展开后自然形成水平平台</span>
+      <section aria-labelledby="story-title">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">why the disc format</p>
+              <h2 id="story-title">More stable than classic hanging ear bags, more distinctive on shelf.</h2>
             </div>
-            <div class="hotspot hotspot-2">
-              <i aria-hidden="true"></i>
-              <span><strong>折叠滤翼</strong>收纳平整，展开后稳定</span>
+            <p>
+              The recognisable round support ring rests across the cup rim while the center
+              filter pocket holds coffee grounds. The result is a clean single serve ritual
+              with more surface area for branding than a standard drip bag.
+            </p>
+          </div>
+
+          <div class="story-grid">
+            <div class="story-photo">
+              <img
+                src="assets/tonchant-filter-product-side.jpg"
+                alt="Side view of the disc support ring and center filter pocket"
+              >
             </div>
-            <div class="hotspot hotspot-3">
-              <i aria-hidden="true"></i>
-              <span><strong>中心粉仓</strong>让热水先浸润再下滤</span>
+            <div class="story-copy">
+              <article class="story-line">
+                <h3>The ring supports the filter.</h3>
+                <p>
+                  The wide disc sits across the cup opening, helping the filter pocket stay open
+                  and reducing the uneven pull often seen in classic hanging ear bags.
+                </p>
+              </article>
+              <article class="story-line">
+                <h3>The center pocket handles extraction.</h3>
+                <p>
+                  Ground coffee sits inside the center filter pocket. Hot water passes through
+                  the coffee bed and filters directly into the cup or server.
+                </p>
+              </article>
+              <article class="story-line">
+                <h3>The format improves brand presentation.</h3>
+                <p>
+                  The top ring, lid, outer pouch, and display box can all support a premium
+                  visual system for retail, hotel, travel, and tasting programs.
+                </p>
+              </article>
             </div>
           </div>
-          <div class="design-copy">
-            <p class="section-kicker">structure</p>
-            <h2 id="design-title">把手冲滤杯、滤纸和咖啡粉合成一片。</h2>
+        </div>
+      </section>
+
+      <section class="structure-band" id="structure" aria-labelledby="structure-title">
+        <div class="section-inner structure-grid">
+          <div class="product-stage" aria-label="Tonchant Coffee Filters structure">
+            <img
+              src="assets/tonchant-filter-product-open.jpg"
+              alt="Tonchant Coffee Filters resting on a glass server with the filter pocket open"
+            >
+            <div class="callout callout-1">
+              <i aria-hidden="true"></i>
+              <span><strong>Disc support ring</strong>rests on the cup rim for a stable opening</span>
+            </div>
+            <div class="callout callout-2">
+              <i aria-hidden="true"></i>
+              <span><strong>Center filter pocket</strong>holds coffee grounds and controls filtration</span>
+            </div>
+            <div class="callout callout-3">
+              <i aria-hidden="true"></i>
+              <span><strong>Custom surface</strong>supports color, artwork, logo, and pouch design</span>
+            </div>
+          </div>
+          <div class="spec-panel">
+            <p class="section-kicker">product spec</p>
+            <h2 id="structure-title">A practical filter format for overseas single serve coffee lines.</h2>
             <p>
-              ORBITA 的圆盘结构让水流从中心进入，以更均匀的路径穿过粉层。
-              纸感轻，支撑强，适合每天需要一杯稳定精品咖啡的人。
+              Based on Tonchant product specifications, the filter can be produced with durable
+              paper or non-woven material options, packaged as single units or custom retail packs,
+              and filled by coffee brands for single serve brewing.
             </p>
             <ul class="spec-list">
-              <li><span>滤袋直径</span><strong>106 mm</strong></li>
-              <li><span>适配杯口</span><strong>72-94 mm</strong></li>
-              <li><span>建议注水</span><strong>3 段式 180 ml</strong></li>
-              <li><span>外袋保存</span><strong>氮气独立封存</strong></li>
+              <li><span>Recommended fill</span><strong>10-16 g</strong></li>
+              <li><span>Standard size</span><strong>9.5 cm square</strong></li>
+              <li><span>Material options</span><strong>paper / non-woven</strong></li>
+              <li><span>Packaging</span><strong>single bag / custom pack</strong></li>
+              <li><span>Customization</span><strong>size, print, logo, pouch</strong></li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section class="ritual" id="ritual" aria-labelledby="ritual-title">
+      <section class="flow" id="workflow" aria-labelledby="workflow-title">
         <div class="section-inner">
           <div class="section-head">
             <div>
-              <p class="section-kicker">brew ritual</p>
-              <h2 id="ritual-title">三步完成一杯有层次的热咖啡。</h2>
+              <p class="section-kicker">consumer ritual</p>
+              <h2 id="workflow-title">Easy for the consumer. Flexible for your product team.</h2>
             </div>
             <p>
-              不需要磨豆、称重或冲煮器具。保留手冲的香气展开过程，同时把变量
-              降到适合日常重复的范围。
+              The filter, coffee dose, and outer pouch can be prepared in advance. Consumers only
+              need a cup and hot water, making the format suitable for cafes, offices, hotels,
+              travel kits, and promotional tasting boxes.
             </p>
           </div>
-          <div class="steps">
-            <article class="step">
-              <span class="step-index">01</span>
-              <h3>撕开外袋</h3>
-              <p>取出滤袋，轻轻拉开两侧滤翼，让圆盘自然展开。</p>
+          <div class="flow-grid">
+            <article class="flow-card">
+              <span class="flow-index">01</span>
+              <h3>Open the pouch</h3>
+              <p>Remove the individually packed filter and keep the disc ring and center pocket open.</p>
             </article>
-            <article class="step">
-              <span class="step-index">02</span>
-              <h3>架上杯口</h3>
-              <p>把中心粉仓对准杯口，先注入少量热水完成 20 秒闷蒸。</p>
+            <article class="flow-card">
+              <span class="flow-index">02</span>
+              <h3>Place on cup</h3>
+              <p>Set the round support ring flat on the cup rim so the filter pocket hangs inside.</p>
             </article>
-            <article class="step">
-              <span class="step-index">03</span>
-              <h3>分段注水</h3>
-              <p>继续注至 180 ml，待液面完全下滤后提起丢弃。</p>
+            <article class="flow-card">
+              <span class="flow-index">03</span>
+              <h3>Pour in stages</h3>
+              <p>Bloom the grounds, then add hot water according to your brand's brew recipe.</p>
+            </article>
+            <article class="flow-card">
+              <span class="flow-index">04</span>
+              <h3>Lift and discard</h3>
+              <p>After filtration is complete, lift out the filter for a cleaner single serve routine.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="collection" aria-labelledby="collection-title">
+      <section class="custom-band" id="custom" aria-labelledby="custom-title">
         <div class="section-inner">
           <div class="section-head">
             <div>
-              <p class="section-kicker">reserve collection</p>
-              <h2 id="collection-title">三款风味，对应一天里的不同时间。</h2>
+              <p class="section-kicker">private label</p>
+              <h2 id="custom-title">A better format for premium samples, retail boxes, and co-branded coffee.</h2>
             </div>
             <p>
-              从花果调到黑巧调，所有配方都按飞碟滤袋的萃取曲线重新烘焙与研磨。
+              Tonchant Coffee Filters can support the full product system: filter material,
+              disc artwork, outer pouch, display box, and usage direction. This makes the format
+              useful for both established roasters and new market tests.
             </p>
           </div>
-          <div class="collection-grid">
-            <article class="blend-card primary">
-              <div class="blend-top">
-                <span class="blend-label">01 / signature</span>
-                <span>浅中烘</span>
-              </div>
-              <div class="blend-name">
-                <h3>Solar Bloom 日冕花香</h3>
-                <p>埃塞俄比亚水洗批次，明亮柑橘、白花与蜂蜜尾韵。</p>
-              </div>
-              <div class="taste-row">
-                <span class="taste">柑橘</span>
-                <span class="taste">白花</span>
-                <span class="taste">蜂蜜</span>
-              </div>
+
+          <div class="custom-grid">
+            <article class="custom-card">
+              <span class="custom-label">Material</span>
+              <h3>Biodegradable options</h3>
+              <p>Choose paper or non-woven filter material options to match your extraction and sustainability goals.</p>
             </article>
-            <article class="blend-card secondary">
-              <div class="blend-top">
-                <span class="blend-label">02 / daily</span>
-                <span>中烘</span>
-              </div>
-              <div class="blend-name">
-                <h3>Steel Moon 银月均衡</h3>
-                <p>坚果、红苹果与焦糖，适合不加糖的日常热饮。</p>
-              </div>
-              <div class="taste-row">
-                <span class="taste">坚果</span>
-                <span class="taste">红苹果</span>
-                <span class="taste">焦糖</span>
-              </div>
+            <article class="custom-card">
+              <span class="custom-label">Print</span>
+              <h3>Disc artwork</h3>
+              <p>The visible top surface can carry seasonal graphics, tasting themes, brewing cues, or brand color.</p>
+            </article>
+            <article class="custom-card">
+              <span class="custom-label">Pack</span>
+              <h3>Retail-ready pouch</h3>
+              <p>Single sachets, custom packs, and display boxes help turn the filter into a finished product line.</p>
+            </article>
+            <article class="custom-card">
+              <span class="custom-label">Sample</span>
+              <h3>Test before scale</h3>
+              <p>Validate fit, print, filtration speed, and coffee dose before moving into a larger production run.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="shop-band" id="shop" aria-labelledby="shop-title">
-        <div class="section-inner shop-panel">
-          <div class="pack-shot" aria-label="ORBITA 包装视觉">
-            <span class="pack-shadow" aria-hidden="true"></span>
-            <span class="pack" aria-hidden="true"></span>
-          </div>
-          <div class="shop-copy">
-            <p class="section-kicker">first release</p>
-            <h2 id="shop-title">Reserve Box 首发试饮盒</h2>
+      <section aria-labelledby="gallery-title">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">real product views</p>
+              <h2 id="gallery-title">Official product images keep the story accurate.</h2>
+            </div>
             <p>
-              20 枚独立氮封飞碟滤袋，含两种风味组合。适合办公室、旅行箱和
-              想把精品咖啡流程变轻的人。
+              The landing page now combines generated lifestyle scenes with real Tonchant product
+              references, so overseas buyers see both the marketing potential and the actual filter shape.
             </p>
-            <div class="option-row" role="list" aria-label="选择风味">
-              <button class="option is-active" type="button" data-price="¥168">混合风味</button>
-              <button class="option" type="button" data-price="¥158">日冕花香</button>
-              <button class="option" type="button" data-price="¥158">银月均衡</button>
-            </div>
-            <div class="price-row">
-              <span class="price" id="price">¥168</span>
-              <span class="price-note">20 枚装 / 首发批次</span>
-            </div>
-            <form class="signup-form" id="signup-form">
-              <input
-                aria-label="邮箱地址"
-                type="email"
-                name="email"
-                placeholder="留下邮箱，接收开售提醒"
-                required
+          </div>
+
+          <div class="gallery-grid">
+            <figure class="gallery-main">
+              <img
+                src="assets/tonchant-filter-product-main.jpg"
+                alt="Tonchant Coffee Filters filled with ground coffee on a glass server"
               >
-              <button class="button button-primary" type="submit">订阅首发</button>
-            </form>
+              <figcaption>filled with ground coffee</figcaption>
+            </figure>
+            <div class="gallery-stack">
+              <figure>
+                <img
+                  src="assets/tonchant-filter-product-open.jpg"
+                  alt="Open Tonchant Coffee Filters on a glass server"
+                >
+                <figcaption>open filter pocket</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="assets/tonchant-filter-product-side.jpg"
+                  alt="Side view of Tonchant Coffee Filters showing disc ring and pocket depth"
+                >
+                <figcaption>disc ring and filter pocket</figcaption>
+              </figure>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section class="detail-band" aria-labelledby="detail-title">
+        <div class="section-inner">
+          <div class="detail-panel">
+            <img
+              src="assets/tonchant-filter-process.png"
+              alt="Tonchant Coffee Filters production flow showing filling, lid closing, and pouch sealing"
+            >
+            <div class="detail-copy">
+              <p class="section-kicker">production logic</p>
+              <h2 id="detail-title">From filter to finished sachet.</h2>
+              <p>
+                Tonchant Coffee Filters can be supplied as filter components for coffee brands or
+                developed into complete single serve coffee products with custom pouch and packaging
+                specifications. The page separates buyer-facing benefits from production steps.
+              </p>
+              <a class="button button-secondary" href="#inquiry">Discuss Custom Options</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band" id="inquiry" aria-labelledby="inquiry-title">
+        <div class="section-inner cta-grid">
+          <div class="cta-copy">
+            <p class="section-kicker">sample request</p>
+            <h2 id="inquiry-title">Build a version for your coffee brand.</h2>
+            <p>
+              Share your target dose, material preference, packaging idea, and order volume.
+              Tonchant can help evaluate sample specifications before wholesale production.
+            </p>
+          </div>
+          <form class="inquiry-form" id="inquiry-form">
+            <label>
+              Company / Brand
+              <input name="company" placeholder="Your coffee brand" required>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="name@example.com" required>
+            </label>
+            <label>
+              Target dose
+              <input name="capacity" placeholder="10 g / 12 g / 16 g">
+            </label>
+            <label>
+              Estimated volume
+              <input name="quantity" placeholder="Samples / 5,000 / 20,000">
+            </label>
+            <label class="form-wide">
+              Custom requirements
+              <textarea name="message" placeholder="Material, print, pouch, box, target market, or brewing notes"></textarea>
+            </label>
+            <button class="button button-primary form-wide" type="submit">Submit Sample Request</button>
+            <p class="form-note form-wide" id="form-note">This demo shows a local confirmation state. Connect it to email, CRM, or WhatsApp for production use.</p>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <span>ORBITA Coffee Lab</span>
-        <span>高级便携咖啡滤袋概念页</span>
+        <span>Tonchant Coffee Filters</span>
+        <span>Biodegradable single serve filter landing page</span>
       </div>
     </footer>
 
     <script>
-      const options = document.querySelectorAll(".option");
-      const price = document.querySelector("#price");
-      const form = document.querySelector("#signup-form");
-
-      options.forEach((option) => {
-        option.addEventListener("click", () => {
-          options.forEach((item) => item.classList.remove("is-active"));
-          option.classList.add("is-active");
-          price.textContent = option.dataset.price;
-        });
-      });
+      const form = document.querySelector("#inquiry-form");
+      const note = document.querySelector("#form-note");
 
       form.addEventListener("submit", (event) => {
         event.preventDefault();
-        form.querySelector("button").textContent = "已加入清单";
+        const button = form.querySelector("button");
+        button.textContent = "Request Received";
+        note.textContent = "Sample request captured locally. Connect this form to your sales workflow before publishing.";
         form.reset();
       });
     </script>
