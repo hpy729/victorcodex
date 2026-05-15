@@ -8,7 +8,7 @@
       name="description"
       content="Tonchant Coffee Filters are disc-shaped single serve coffee filters made with eco-friendly biodegradable material options for specialty coffee brands."
     >
-    <link rel="preload" href="assets/tonchant-filters-hero-scene.png" as="image">
+    <link rel="preload" href="assets/tonchant-filters-hero-accurate.png" as="image">
     <style>
       :root {
         --ink: #13231d;
@@ -145,7 +145,8 @@
         height: min(820px, 88svh);
         position: relative;
         overflow: hidden;
-        background: var(--paper);
+        background: #101210;
+        color: var(--white);
       }
 
       .hero-photo {
@@ -166,10 +167,10 @@
         background:
           linear-gradient(
             90deg,
-            rgba(255, 250, 241, 0.98) 0%,
-            rgba(255, 250, 241, 0.92) 32%,
-            rgba(255, 250, 241, 0.5) 56%,
-            rgba(255, 250, 241, 0.04) 100%
+            rgba(10, 12, 10, 0.94) 0%,
+            rgba(10, 12, 10, 0.78) 36%,
+            rgba(10, 12, 10, 0.3) 62%,
+            rgba(10, 12, 10, 0.1) 100%
           );
       }
 
@@ -200,7 +201,7 @@
 
       .eyebrow {
         margin: 0 0 20px;
-        color: var(--leaf);
+        color: rgba(255, 255, 255, 0.74);
         font-size: 13px;
         font-weight: 820;
         text-transform: uppercase;
@@ -228,7 +229,7 @@
       .hero-lede {
         width: min(560px, 100%);
         margin-bottom: 32px;
-        color: var(--soft-ink);
+        color: rgba(255, 255, 255, 0.78);
         font-size: 20px;
         line-height: 1.78;
         overflow-wrap: anywhere;
@@ -279,13 +280,29 @@
       }
 
       .hero-facts span {
-        border: 1px solid rgba(19, 35, 29, 0.16);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 999px;
         padding: 9px 12px;
-        background: rgba(255, 255, 255, 0.66);
-        color: var(--soft-ink);
+        background: rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.72);
         font-size: 13px;
         font-weight: 700;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+
+      .hero .button {
+        border-color: rgba(255, 255, 255, 0.42);
+      }
+
+      .hero .button-primary {
+        background: var(--white);
+        color: var(--ink);
+      }
+
+      .hero .button-secondary {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--white);
       }
 
       .proof-strip {
@@ -816,7 +833,7 @@
         }
 
         .hero::before {
-          background: linear-gradient(90deg, rgba(255, 250, 241, 0.98) 0%, rgba(255, 250, 241, 0.88) 48%, rgba(255, 250, 241, 0.18) 100%);
+          background: linear-gradient(90deg, rgba(10, 12, 10, 0.94) 0%, rgba(10, 12, 10, 0.78) 52%, rgba(10, 12, 10, 0.2) 100%);
         }
 
         .proof-inner,
@@ -856,7 +873,7 @@
         }
 
         .hero::before {
-          background: linear-gradient(180deg, rgba(255, 250, 241, 0.94) 0%, rgba(255, 250, 241, 0.76) 58%, rgba(255, 250, 241, 0.22) 100%);
+          background: linear-gradient(180deg, rgba(10, 12, 10, 0.88) 0%, rgba(10, 12, 10, 0.72) 58%, rgba(10, 12, 10, 0.42) 100%);
         }
 
         .hero-inner,
@@ -885,8 +902,21 @@
         }
 
         .hero-lede {
+          width: min(350px, 100%);
           font-size: 16px;
           line-height: 1.7;
+        }
+
+        .hero-facts {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          width: min(360px, 100%);
+        }
+
+        .hero-facts span {
+          width: 100%;
+          padding: 8px 10px;
+          font-size: 12px;
         }
 
         .proof-inner,
@@ -990,8 +1020,8 @@
       <section class="hero" aria-label="Tonchant Coffee Filters hero">
         <img
           class="hero-photo"
-          src="assets/tonchant-filters-hero-scene.png"
-          alt="Tonchant Coffee Filters on a glass coffee server in a bright cafe scene"
+          src="assets/tonchant-filters-hero-accurate.png"
+          alt="Round UFO coffee filter disc resting on a glass cup with the center filter pouch hanging inside"
         >
         <div class="hero-inner">
           <div class="hero-copy">
@@ -1008,7 +1038,7 @@
             </div>
             <div class="hero-facts" aria-label="Product highlights">
               <span>10-16 g single serve capacity</span>
-              <span>9.5 cm standard size</span>
+              <span>9.5 cm round disc</span>
               <span>Biodegradable material options</span>
               <span>Custom print and pouch service</span>
             </div>
@@ -1025,7 +1055,7 @@
           </div>
           <div class="proof-item">
             <strong>9.5 cm</strong>
-            Standard filter format
+            Round disc format
           </div>
           <div class="proof-item">
             <strong>Eco</strong>
@@ -1042,13 +1072,13 @@
         <div class="section-inner">
           <div class="section-head">
             <div>
-              <p class="section-kicker">material story</p>
-              <h2 id="materials-title">A brighter single serve experience with a lower impact story.</h2>
+              <p class="section-kicker">scene library</p>
+              <h2 id="materials-title">Show the filter where overseas buyers can imagine selling it.</h2>
             </div>
             <p>
               Tonchant Coffee Filters can be specified with biodegradable paper or non-woven
-              filter material options, helping coffee brands build convenient products without
-              giving up their sustainability message.
+              filter material options. The page now uses more lifestyle scenes to connect that
+              sustainable format with hotel amenities, travel kits, offices, cafes, and retail packs.
             </p>
           </div>
 
@@ -1066,6 +1096,34 @@
                 alt="Tonchant Coffee Filters with blank packaging and retail display box"
               >
               <figcaption>private-label packaging ready</figcaption>
+            </figure>
+            <figure class="scene-card">
+              <img
+                src="assets/tonchant-filters-hotel-scene.png"
+                alt="Tonchant Coffee Filters served on a hotel breakfast tray"
+              >
+              <figcaption>hotel breakfast amenities</figcaption>
+            </figure>
+            <figure class="scene-card">
+              <img
+                src="assets/tonchant-filters-travel-scene.png"
+                alt="Tonchant Coffee Filters used with an enamel cup during outdoor travel"
+              >
+              <figcaption>travel and outdoor kits</figcaption>
+            </figure>
+            <figure class="scene-card">
+              <img
+                src="assets/tonchant-filters-office-scene.png"
+                alt="Tonchant Coffee Filters on an office counter with a laptop and pouch"
+              >
+              <figcaption>office pantry programs</figcaption>
+            </figure>
+            <figure class="scene-card">
+              <img
+                src="assets/tonchant-filters-cafe-pour-scene.png"
+                alt="Hot water pouring into Tonchant Coffee Filters on a cafe counter"
+              >
+              <figcaption>specialty cafe brewing moment</figcaption>
             </figure>
           </div>
         </div>
@@ -1149,7 +1207,7 @@
             </p>
             <ul class="spec-list">
               <li><span>Recommended fill</span><strong>10-16 g</strong></li>
-              <li><span>Standard size</span><strong>9.5 cm square</strong></li>
+              <li><span>Standard size</span><strong>9.5 cm round disc</strong></li>
               <li><span>Material options</span><strong>paper / non-woven</strong></li>
               <li><span>Packaging</span><strong>single bag / custom pack</strong></li>
               <li><span>Customization</span><strong>size, print, logo, pouch</strong></li>
